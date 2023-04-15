@@ -1,10 +1,32 @@
 import React, { useRef, useEffect } from "react";
 
-function ScoreDial({ value, size, fillColor, strokeColor, textColor, circleSize, circleColor } : {value: string, size: number, fillColor: string, strokeColor: string, textColor: string, circleSize: number, circleColor: string}) {
-    const canvasRef = useRef(null);
+function ScoreDial({ value, size, strokeColor, textColor, circleSize} : {value: string, size: number, strokeColor: string, textColor: string, circleSize: number}) {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    var numerical_value = Number(value);
+    var fillColor = "";
+    var circleColor = "";
+    if(numerical_value < 20) {
+        fillColor = "red";
+        circleColor = "red";
+    }
+    else if(numerical_value >= 20 && numerical_value < 40) {
+        fillColor = "orange";
+        circleColor = "orange";
+    }
+    else if(numerical_value >= 40 && numerical_value < 60) {
+        fillColor = "darkgoldenrod";
+        circleColor = "darkgoldenrod";
+    }
+    else if(numerical_value >= 60 && numerical_value < 80) {
+        fillColor = "lightgreen";
+        circleColor = "lightgreen";
+    }
+    else {
+        fillColor = "green";
+        circleColor = "green";
+    }
 
     useEffect(() => {
-        const canvasRef = useRef<HTMLCanvasElement>(null);
         const canvas = canvasRef.current;
         if(canvas == null) return;
         const ctx = canvas.getContext("2d");
@@ -14,14 +36,9 @@ function ScoreDial({ value, size, fillColor, strokeColor, textColor, circleSize,
         }
 
         // Set the properties for the circle
-        const x = 100;
-        const y = 100;
-        const radius = 20;
-        const circleColor = "black";
-        const fillColor = "black";
-        const strokeColor = "white";
-        const size = 30;
-        const textColor = "white";
+        const x = size / 2;
+        const y = size / 2;
+        const radius = circleSize || size / 2;
 
         // Draw the circle
         ctx.beginPath();

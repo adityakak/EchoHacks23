@@ -8,10 +8,10 @@ function App() {
     <div className="App">
       <div> 
         <h1> Sustainability Calculator</h1>
-        <ScoreDial value={"100"} size={20} fillColor="black" strokeColor="black" textColor="white" circleSize={50} circleColor="black"/>
+        <ScoreDial value={"50"} size={100} strokeColor="black" textColor="white" circleSize={50} /> 
         <Separator />
         <p> Content </p>
-      </div>
+      </div>     
     </div>
   );
 }
