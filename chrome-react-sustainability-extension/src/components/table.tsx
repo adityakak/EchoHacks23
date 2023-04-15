@@ -15,18 +15,6 @@ type TableProps = {
       score: number;
       image: string;
     }>;
-    alt_two: Array<{
-      item: string;
-      link: string;
-      score: number;
-      image: string;
-    }>;
-    alt_three: Array<{
-      item: string;
-      link: string;
-      score: number;
-      image: string;
-    }>;
   }>;
 };
   
@@ -36,18 +24,14 @@ type TableProps = {
         <thead>
           <tr>
             <th>Original Item</th>
-            <th>Alternative One</th>
-            <th>Alternative Two</th>
-            <th>Alternative Three</th>
+            <th>Alternative</th>
           </tr>
         </thead>
         <tbody>
-          {data.map(({ original_item, alt_one, alt_two, alt_three }, i) => (
+          {data.map(({ original_item, alt_one}, i) => (
             <tr key={i}>
               <td><Cell data={original_item}/></td>
               <td><Cell data={alt_one}/></td>
-              <td><Cell data={alt_two}/></td>
-              <td><Cell data={alt_three}/></td>
             </tr>
           ))}
         </tbody>

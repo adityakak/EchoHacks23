@@ -9,7 +9,7 @@ const data = [
   {
     original_item: [
       {
-        item: "plastic bag",
+        item: "Plastic Bag",
         link: "https://example.com/plastic-bag",
         score: 7.5,
         image: image_link
@@ -17,28 +17,12 @@ const data = [
     ],
     alt_one: [
       {
-        item: "cardboard bag",
+        item: "Cardboard Bag",
         link: "https://example.com/cardboard-bag",
         score: 8.2,
         image: image_link
       }
     ],
-    alt_two: [
-      {
-        item: "paper bag",
-        link: "https://example.com/paper-bag",
-        score: 8.4,
-        image: image_link
-      }
-    ],
-    alt_three: [
-      {
-        item: "cotton bag",
-        link: "https://example.com/cotton-bag",
-        score: 9.0,
-        image: image_link
-      }
-    ]
   }
 ];
 
