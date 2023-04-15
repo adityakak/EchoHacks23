@@ -30,7 +30,7 @@ def get_info():
     out_json['alt_score'] = alternative_data['alt_score']
 
 
-    return jsonify({out_json})
+    return jsonify(out_json)
 
 
 if __name__ == "__main__":
