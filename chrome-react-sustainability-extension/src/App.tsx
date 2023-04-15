@@ -23,6 +23,7 @@ function App() {
       const url = tabs[0].url;
       if (url) {
         setCurrentUrl(url);
+        getData();
       }
       else {
         return;
@@ -59,7 +60,7 @@ function App() {
     <div className="App">
       <div>
         <h1> Sustainability Calculator</h1>
-        <ScoreDial value={"50"} size={100} strokeColor="black" textColor="white" circleSize={50} />
+        <ScoreDial value={score} size={100} strokeColor="black" textColor="white" circleSize={50} />
         <Separator />
         <Table data={[
           {
