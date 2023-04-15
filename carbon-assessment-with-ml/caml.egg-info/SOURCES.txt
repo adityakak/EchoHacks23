@@ -1,0 +1,14 @@
+LICENSE-DATA.txt
+LICENSE-SUMMARY.txt
+LICENSE.txt
+NOTICE.txt
+README.md
+setup.py
+caml/__init__.py
+caml/config.py
+caml/similarity.py
+caml/utils.py
+caml.egg-info/PKG-INFO
+caml.egg-info/SOURCES.txt
+caml.egg-info/dependency_links.txt
+caml.egg-info/top_level.txt
