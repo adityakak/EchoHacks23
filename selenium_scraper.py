@@ -14,6 +14,11 @@ def get_attributes(url): # returns a dictionary where keys are name, image, pric
     attributes["name"] = result.text
     result = driver.find_element(By.CLASS_NAME, "a-price.a-text-price.a-size-medium.apexPriceToPay")
     attributes["price"] = result.text
+    result = driver.find_element(By.ID, "landingImage")
+    image = result.get_attribute("data-a-dynamic-image")
+    image = image[image.index('"') + 1:]
+    image = image[ : image.index('"')]
+    attributes["image"] = image
     return attributes
 
 if __name__ == '__main__':
