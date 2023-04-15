@@ -1,2 +1,2 @@
 def sustainability_score(product):
-    return -1
+    return 69 # TODO: update sustainability score
