@@ -1,13 +1,34 @@
 import React from "react";
+import Cell from './cell';
 
 type TableProps = {
-    data: Array<{
-      original_item: string;
-      alt_one: string;
-      alt_two: string;
-      alt_three: string;
+  data: Array<{
+    original_item: Array<{
+      item: string;
+      link: string;
+      score: number;
+      image: string;
     }>;
-  };
+    alt_one: Array<{
+      item: string;
+      link: string;
+      score: number;
+      image: string;
+    }>;
+    alt_two: Array<{
+      item: string;
+      link: string;
+      score: number;
+      image: string;
+    }>;
+    alt_three: Array<{
+      item: string;
+      link: string;
+      score: number;
+      image: string;
+    }>;
+  }>;
+};
   
   const Table: React.FC<TableProps> = ({ data }) => {
     return (
@@ -23,10 +44,10 @@ type TableProps = {
         <tbody>
           {data.map(({ original_item, alt_one, alt_two, alt_three }, i) => (
             <tr key={i}>
-              <td>{original_item}</td>
-              <td>{alt_one}</td>
-              <td>{alt_two}</td>
-              <td>{alt_three}</td>
+              <td><Cell data={original_item}/></td>
+              <td><Cell data={alt_one}/></td>
+              <td><Cell data={alt_two}/></td>
+              <td><Cell data={alt_three}/></td>
             </tr>
           ))}
         </tbody>
