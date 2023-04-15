@@ -5,8 +5,9 @@ type CellProps = {
     data: Array<{
       item: string;
       link: string;
-      score: number;
+      score: string;
       image: string;
+      price: string;
     }>;
   };
 
@@ -17,7 +18,8 @@ type CellProps = {
           <div key={index}>
             <img src={`data:image/png;base64,${item.image}`} alt={item.item} />
             <h3><a href={item.link} target="_blank" rel="noopener noreferrer">{item.item}</a></h3>
-            <p><ScoreDial value={item.score.toString()} size={50} strokeColor="black" textColor="white" circleSize={25}/></p>
+            <p>{item.price}</p>
+            <p><ScoreDial value={item.score} size={50} strokeColor="black" textColor="white" circleSize={25}/></p>
           </div>
         ))}
       </div>

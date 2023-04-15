@@ -6,14 +6,16 @@ type TableProps = {
     original_item: Array<{
       item: string;
       link: string;
-      score: number;
+      score: string;
       image: string;
+      price: string;
     }>;
     alt_one: Array<{
       item: string;
       link: string;
-      score: number;
+      score: string;
       image: string;
+      price: string;
     }>;
   }>;
 };
